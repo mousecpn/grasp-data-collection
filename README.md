@@ -21,8 +21,14 @@ pip install -e .
 ### Raw synthetic grasping trials
 
 ```bash
-./data_collection.sh (giga | graspnet | contact) (pile | packed) /path/to/raw/data num_grasps
+./data_collection.sh (giga | graspnet | contact) (pile | packed) /path/to/raw/data num_grasps (True | False)
 ```
+
+Argument: 
+- Data collection mode: (i) `giga` denotes the way to collect grasps in [GIGA](https://github.com/UT-Austin-RPL/GIGA), in which the grasp approaching vector is aligned with the surface normal. (ii) `graspnet` denotes using [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) to collect grasps. (iii) `contact` denotes the way to collect grasps in EdgeGraspNet, ICGNet and OrbitGrasp, in which the contact normal is aligned with the surface normal.
+- Data path
+- Number of Grasps: it is only valid in `giga` and `graspnet` modes.
+- Random view: it is only valid in `giga` and `graspnet` modes.
 
 ### Data clean and processing
 
@@ -35,7 +41,7 @@ python scripts/clean_balance_data.py /path/to/raw/data
 Then construct the dataset (add noise):
 
 ```bash
-python scripts/construct_dataset_parallel.py --num-proc 40 --single-view --add-noise dex /path/to/raw/data /path/to/new/data
+python scripts/construct_dataset_parallel.py --num-proc 40 --single-view --add-noise (dex | norm) /path/to/raw/data /path/to/new/data
 ```
 
 ### Save occupancy data

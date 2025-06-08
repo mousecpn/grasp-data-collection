@@ -4,6 +4,7 @@ MODE=${1:-graspnet}
 SCENE=${2:-"pile"}
 SAVE_DIR=${3:-"data/data_pile_train_raw"}  
 GRASP_NUM=${4:-2000000}  
+RANDOM_CAM=${5:-"True"}
 
 BASE=0     
 GUI="False"
@@ -20,6 +21,7 @@ if [ "$MODE" == "graspnet" ]; then
       --num-grasps "$AVG_GRASP_NUM" \
       --num-proc "1" \
       --save-scene \
+      --random "$RANDOM_CAM" \
       --root "$SAVE_DIR" &
   done
 

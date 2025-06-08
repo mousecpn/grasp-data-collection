@@ -2,10 +2,10 @@ import os
 import trimesh
 import numpy as np
 from urchin import URDF
-# try:
-#     from igd.ConvONets.utils.libmesh import check_mesh_contains
-# except:
-#     print('import libmesh failed!')
+try:
+    from vgn.ConvONets.utils.libmesh import check_mesh_contains
+except:
+    print('import libmesh failed!')
 
 
 n_iou_points = 100000

@@ -162,9 +162,13 @@ def render_side_images(sim, n=1, random=False):
 
     for i in range(n):
         if random:
-            r = np.random.uniform(1.6, 2.4) * sim.size
-            theta = np.random.uniform(np.pi / 4.0, 5.0 * np.pi / 12.0)
-            phi = np.random.uniform(- 5.0 * np.pi / 5, - 3.0 * np.pi / 8.0)
+            # r = np.random.uniform(1.6, 2.4) * sim.size
+            # theta = np.random.uniform(np.pi / 4.0, 5.0 * np.pi / 12.0)
+            # phi = np.random.uniform(- 5.0 * np.pi / 5, - 3.0 * np.pi / 8.0)
+            r = np.random.uniform(1.5, 2) * sim.size
+            theta = np.random.uniform(np.pi / 4, np.pi / 2.4)
+            phi = np.random.uniform(0.0, np.pi)
+            origin = Transform(Rotation.identity(), np.r_[sim.size / 2, sim.size / 2, 0.0 + 0.15])
         else:
             r = 2 * sim.size
             theta = np.pi / 3.0

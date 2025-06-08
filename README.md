@@ -25,10 +25,11 @@ pip install -e .
 ```
 
 Argument: 
-- Data collection mode: (i) `giga` denotes the way to collect grasps in [GIGA](https://github.com/UT-Austin-RPL/GIGA), in which the grasp approaching vector is aligned with the surface normal. (ii) `graspnet` denotes using [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) to collect grasps. (iii) `contact` denotes the way to collect grasps in EdgeGraspNet, ICGNet and OrbitGrasp, in which the contact normal is aligned with the surface normal.
-- Data path
-- Number of Grasps: it is only valid in `giga` and `graspnet` modes.
-- Random view: it is only valid in `giga` and `graspnet` modes.
+- **Data collection mode**: (i) `giga` denotes the way to collect grasps in [GIGA](https://github.com/UT-Austin-RPL/GIGA), in which the grasp approaching vector is aligned with the surface normal. (ii) `graspnet` denotes using [graspnet-baseline](https://github.com/graspnet/graspnet-baseline) to collect grasps. (iii) `contact` denotes the way to collect grasps in EdgeGraspNet, ICGNet and OrbitGrasp, in which the contact normal is aligned with the surface normal.
+- **Scene**: `pile` or `packed`.
+- **Raw data path**
+- **Number of Grasps**: it is only valid in `giga` and `graspnet` modes.
+- **Random view**: `True` or `False`. it is only valid in `giga` and `graspnet` modes.
 
 ### Data clean and processing
 

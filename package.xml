@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>vgn</name>
+    <version>0.1.0</version>
+    <description>Equivariant Volumetric Grasping.</description>
+
+    <maintainer email="pinhao.song@kuleuven.be">Pinhao Song</maintainer>
+
+    <license>Apache</license>
+    <url>https://github.com/mousecpn/grasp-data-collection</url>
+
+</package>

@@ -36,13 +36,13 @@ Argument:
 First clean and balance the data using:
 
 ```bash
-python scripts/clean_balance_data.py /path/to/raw/data
+python clean_balance_data.py /path/to/raw/data
 ```
 
 Then construct the dataset (add noise):
 
 ```bash
-python scripts/construct_dataset_parallel.py --num-proc 40 --single-view --add-noise (dex | norm) /path/to/raw/data /path/to/new/data
+python construct_dataset_parallel.py --num-proc 40 --single-view --add-noise (dex | norm) /path/to/raw/data /path/to/new/data
 ```
 
 ### Save occupancy data
@@ -50,10 +50,10 @@ python scripts/construct_dataset_parallel.py --num-proc 40 --single-view --add-n
 Sampling occupancy data on the fly can be very slow and block the training, so I sample and store the occupancy data in files beforehand:
 
 ```bash
-python scripts/save_occ_data_parallel.py /path/to/raw/data 100000 2 --num-proc 40
+python save_occ_data_parallel.py /path/to/raw/data 100000 2 --num-proc 40
 ```
 
-Please run `python scripts/save_occ_data_parallel.py -h` to print all options.
+Please run `python save_occ_data_parallel.py -h` to print all options.
 
 
 

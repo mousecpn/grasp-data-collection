@@ -10,7 +10,7 @@ from utils.implicit import get_scene_from_mesh_pose_list, sample_iou_points
 def sample_occ(mesh_pose_list_path, num_point, uniform):
     mesh_pose_list = np.load(mesh_pose_list_path, allow_pickle=True)['pc']
     scene, mesh_list = get_scene_from_mesh_pose_list(mesh_pose_list, return_list=True)
-    if np.random.random() < 0.7:
+    if np.random.random() < 0.9:
         points, occ = sample_iou_points(mesh_list, scene.bounds, num_point, uniform=False)
     else:
         points, occ = sample_iou_points(mesh_list, scene.bounds, num_point, uniform=True)
